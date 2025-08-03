@@ -50,12 +50,18 @@ AutoPSARC.py -i ./input_dir -o ./output_dir
 ```
 
 ## Common Options
-Argument	Description
--i, --input	Directory to search for .psarc files
--o, --output	Directory where files will be extracted
--v, --verbose	Enables detailed output during extraction
--l, --log	Enables logging mode to skip already extracted files
---workers	Number of concurrent threads (default: 4)
+Argument	    Description
+
+-i,   --input	  Directory to search for .psarc files
+
+-o,   --output	  Directory where files will be extracted
+
+-v,   --verbose	  Enables detailed output during extraction
+
+-l,   --log	  Enables logging mode to skip already extracted files
+
+--workers	  Number of concurrent threads (default: 4)
+
 
 ### Example
 ```bash
