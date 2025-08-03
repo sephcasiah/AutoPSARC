@@ -1,7 +1,7 @@
 # AutoPSARC
 A lightweight batch tool for extracting PSARC archives from PS3 games. Recursively scans directories, unpacks all .psarc files using PSARC.exe, and preserves original folder structure.
 
-# Note: This program assumes you already have psarc.exe in the working directory, please do not submit issues if you have not done this!
+### Note: This program assumes you already have psarc.exe in the working directory, please do not submit issues if you have not done this!
 
 
 ## 🔧 Features
