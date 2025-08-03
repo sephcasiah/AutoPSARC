@@ -28,4 +28,4 @@ A lightweight batch tool for extracting PSARC archives from PS3 games. Recursive
 python batch_psarc_unpacker.py
 
 
-> ⚠️ **Disclaimer**: This project does **not** include or distribute `PSARC.exe` or any other component of the Sony PS3 SDK. That software is proprietary and governed by Sony's licensing terms. You must legally obtain `PSARC.exe` yourself for this tool to function or use an open source alternative.
+⚠️ **Disclaimer**: This project does **not** include or distribute `PSARC.exe` or any other component of the Sony PS3 SDK. That software is proprietary and governed by Sony's licensing terms. You must legally obtain `PSARC.exe` yourself for this tool to function or use an open source alternative.
