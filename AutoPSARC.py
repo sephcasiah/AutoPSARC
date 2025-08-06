@@ -6,7 +6,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from contextlib import contextmanager
-from typing import Optional, Set, List
+from typing import Optional, Set
 
 CONFIG_PATH = Path.home() / ".autopsarc_config.json"
 MAX_WORKERS = 4
@@ -57,10 +57,21 @@ def extract_single_psarc(psarc_path: Path, extract_dir: Path, psarc_exe: Path, l
         return
 
     if verbose:
-        print(f"Extracting: {psarc_path} → {output_dir}")
+        print(f"Extracting: {psarc_path} -> {output_dir}")
 
     try:
-        result = subprocess.run([str(psarc_exe), "x", str(psarc_path), str(output_dir)], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        result = subprocess.run(
+            [
+                str(psarc_exe),
+                "extract",
+                f"--input={psarc_path}",
+                f"--to={output_dir}",
+                "-y"
+            ],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
         if log_path:
             with lock:
                 with log_path.open("a", encoding="utf-8") as log:
