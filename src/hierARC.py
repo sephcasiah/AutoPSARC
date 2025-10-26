@@ -8,7 +8,7 @@ from threading import Lock
 from contextlib import contextmanager
 from typing import Optional, Set
 
-CONFIG_PATH = Path.home() / ".autopsarc_config.json"
+CONFIG_PATH = Path.home() / ".hierARC_config.json"
 MAX_WORKERS = 4
 DUMMY_LOCK = contextmanager(lambda: (yield))()
 
@@ -129,7 +129,7 @@ def ensure_tqdm_available() -> bool:
 
 def print_full_help():
     print("""
-AutoPSARC — Extended Help
+hierARC — Extended Help
 
 Usage:
   --input / -i   : Directory to scan for PSARC files
@@ -141,11 +141,11 @@ Usage:
   --help-full    : Show this help message with examples
 
 Example:
-  autopsarc.py -i ./archives -o ./extracted -v -l --workers 6
+  hierARC.py -i ./archives -o ./extracted -v -l --workers 6
     """)
 
 def main():
-    parser = argparse.ArgumentParser(description="AutoPSARC extraction utility.")
+    parser = argparse.ArgumentParser(description="hierARC extraction utility.")
     parser.add_argument("--input", "-i", type=Path, help="Directory to search for PSARC files.")
     parser.add_argument("--output", "-o", type=Path, help="Directory to extract files to.")
     parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output.")
