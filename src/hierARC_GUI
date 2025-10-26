@@ -7,12 +7,12 @@ import os
 import json
 from pathlib import Path
 
-CONFIG_PATH = Path.home() / ".psarc_tool_config.json"
+CONFIG_PATH = Path.home() / ".hierARC_config.json"
 
-class AutoPSARCApp:
+class hierARCApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("AutoPSARC - GUI")
+        self.root.title("hierARC - GUI")
 
         self.input_dir = tk.StringVar()
         self.output_dir = tk.StringVar()
@@ -153,7 +153,7 @@ class AutoPSARCApp:
         thread.start()
 
     def run_extraction(self):
-        cli_script = str(Path(__file__).parent / "AutoPSARC.py")
+        cli_script = str(Path(__file__).parent / "hierARC.pyc")
         args = [
             sys.executable, cli_script,
             "-i", self.input_dir.get(),
@@ -202,5 +202,5 @@ class AutoPSARCApp:
 if __name__ == "__main__":
     import shutil
     root = tk.Tk()
-    app = AutoPSARCApp(root)
+    app = hierARCApp(root)
     root.mainloop()
