@@ -1,4 +1,4 @@
-# AutoPSARC
+# hierARC
 This is a command-line utility designed to batch extract `.psarc` archive files, typically used in PlayStation 3 game development. It is ideal for modding, reverse engineering, and game asset preservation.
 
 The tool is designed for efficiency, ease of use, and automation. It includes support for parallel processing, persistent configuration, and optional logging to avoid redundant work.
@@ -40,13 +40,13 @@ Step 1: Set the path to PSARC.exe
 This must be done once. The path will be saved and reused in future runs.
 
 ```bash
-AutoPSARC.py --psarc "C:/Path/To/PSARC.exe"
+hierARC.pyc --psarc "C:/Path/To/PSARC.exe"
 ```
 Alternatively, if no path is specified, the tool will prompt you for one.
 
 Step 2: Extract PSARC files
 ```bash
-AutoPSARC.py -i ./input_dir -o ./output_dir
+hierARC.pyc -i ./input_dir -o ./output_dir
 ```
 
 ## Common Options
@@ -65,19 +65,19 @@ Argument	    Description
 
 ### Example
 ```bash
-AutoPSARC.py -i ./archives -o ./extracted -v -l --workers 6
+hierARC.pyc -i ./archives -o ./extracted -v -l --workers 6
 ```
 
 ## Advanced
 Changing the PSARC path
 ```bash
-AutoPSARC.py --psarc
+hierARC.pyc --psarc
 ```
 This allows you to enter or update the path to PSARC.exe.
 
 ## Extended Help
 ```bash
-AutoPSARC.py --help-full
+hierARC.pyc --help-full
 ```
 Displays usage examples and additional notes.
 
@@ -90,7 +90,7 @@ The output folder structure preserves relative paths from the input directory.
 The tool uses a config file stored at:
 
 ```bash
-~/.autopsarc_config.json
+~/.hierARC_config.json
 ```
 This file stores the location of PSARC.exe & Whether tqdm is enabled
 
